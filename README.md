@@ -4,7 +4,7 @@
 Useful tool for a fast development, when working more developers in one project.<br>
 
 Demo: <a href="http://atandrastoth.co.uk/main/pages/phpclasses/SqlFuncProc/">Live Demo</a><br>
-<img src="demo.png"><br>
+<img src="demo.PNG"><br>
 
 usage:<br>
 -create sql script with your favorite application<br>
