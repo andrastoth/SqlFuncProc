@@ -20,7 +20,7 @@ class SqlFuncProc {
 		}
 		if (mb_internal_encoding() == 'ISO-8859-1' && preg_match('/(.*sqlsrv)/', strtolower($connStr))) {
 			$this->db->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);
-		} else {
+		} else if (mb_internal_encoding() != 'ISO-8859-1' && preg_match('/(.*sqlsrv)/', strtolower($connStr))){
 			$this->db->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_UTF8);
 		}
 	}
