@@ -63,7 +63,7 @@ class SqlFuncProc {
 		}
 		return $sql;
 	}
-	public function wievProc($name = '', $class="") {
+	public function viewProc($name = '', $class="") {
 		$SqlProc = $this->getFiles($this->thisPath . 'SqlProc' . DIRECTORY_SEPARATOR, $type = "sql");
 		$table   = "<table class='".$class."'><caption>Sql Procedures</caption><thead><tr><td>File</td><td>SQL string</td></tr></thead><tbody>";
 		$re      = '/(.*ab)/';
@@ -76,7 +76,7 @@ class SqlFuncProc {
 		}
 		return $table . '</tbody></table>';
 	}
-	public function wievFunc($name = '', $class="") {
+	public function viewFunc($name = '', $class="") {
 		$SqlFunc = $this->getFiles($this->thisPath . 'SqlFunc' . DIRECTORY_SEPARATOR, $type = "sql");
 		$table   = "<table class='".$class."'><caption>Sql Functions</caption><thead><tr><td>File</td><td>SQL string</td></tr></thead><tbody>";
 		$re      = '/(.*ab)/';

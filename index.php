@@ -23,7 +23,7 @@
 		<div class="container">
 		<div class="panel panel-info">
   			<div class="panel-heading">
-				<h3>Get instance with PDO connection parameters and wiev functions</h3>
+				<h3>Get instance with PDO connection parameters and view functions</h3>
   			</div>
 	  		<div class="panel-body">
 					<?php
@@ -31,7 +31,7 @@
 						require_once('SqlFuncProc.php');
 						//$func = SqlFuncProc::getInstance("mysql:host=YOURSERVER;dbname=AdventureWorks2012;charset=utf8", yourname, yourpass);
 						$func = SqlFuncProc::getInstance("sqlsrv:Server=YOURSERVER;Database=AdventureWorks2012", null, null);
-						echo $func->wievFunc('', "table table-bordered");
+						echo $func->viewFunc('', "table table-bordered");
 					?>	
 			 </div>
 			 <div class="panel-footer">
@@ -41,28 +41,28 @@
 	// get instance with PDO connection data
 	//$func = SqlFuncProc::getInstance("mysql:host=YOURSERVER;dbname=AdventureWorks2012;charset=utf8", yourname, yourpass);
 	$func = SqlFuncProc::getInstance("sqlsrv:Server=YOURSERVER;Database=AdventureWorks2012", null, null);
-	// Functions list from folder with parameters : wievFunc($name = "", $class="")
+	// Functions list from folder with parameters : viewFunc($name = "", $class="")
 	// $name: chars from filename, $class: table class
-	echo $func->wievFunc("", "table table-bordered");
+	echo $func->viewFunc("", "table table-bordered");
 ?&gt;
 </pre></code>			 	
 			 </div>
 		</div>
 		<div class="panel panel-info">
   			<div class="panel-heading">
-				<h3>Wiev procedures</h3>
+				<h3>View procedures</h3>
   			</div>
 	  		<div class="panel-body">
 					<?php
-						echo $func->wievProc('', "table table-bordered");
+						echo $func->viewProc('', "table table-bordered");
 					?>	
 			 </div>
 			 <div class="panel-footer">
 <code id="codeNoerror" name="code"><pre>
 &lt;?php
-	// Processes list from folder with parameters : wievFunc($name = "", $class="")
+	// Processes list from folder with parameters : viewFunc($name = "", $class="")
 	// $name: chars from filename, $class: table class
-	echo $func->wievProc("", "table table-bordered");
+	echo $func->viewProc("", "table table-bordered");
 ?&gt;
 </pre></code>			 	
 			 </div>

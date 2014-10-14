@@ -16,12 +16,12 @@ usage:<br>
 	// get instance with PDO connection data
 	//$func = SqlFuncProc::getInstance("mysql:host=YOURSERVER;dbname=AdventureWorks2012;charset=utf8", yourname, yourpass);
 	$func = SqlFuncProc::getInstance("sqlsrv:Server=YOURSERVER;Database=AdventureWorks2012", null, null);
-	// Functions list from folder with parameters : wievFunc($name = "", $class="")
+	// Functions list from folder with parameters : viewFunc($name = "", $class="")
 	// $name: chars from filename, $class: table class
-	echo $func->wievFunc("", "table table-bordered");
-	// Processes list from folder with parameters : wievFunc($name = "", $class="")
+	echo $func->viewFunc("", "table table-bordered");
+	// Processes list from folder with parameters : viewFunc($name = "", $class="")
 	// $name: chars from filename, $class: table class
-	echo $func->wievProc("", "table table-bordered");
+	echo $func->viewProc("", "table table-bordered");
 	//Run noerror proc runProc($proc, $params = array(), $force = false);
 	//$proc: process name, $params: parameter array
 	$data = $func->runProc('noerror', array(50));
